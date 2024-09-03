@@ -1,0 +1,301 @@
+components:
+  schemas:
+    Products:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the product
+        publisher: 
+          type: string
+          description: publisher of the product
+        photo: 
+          type: string
+          description: url de la foto de la portada del manga/novela correspondiente al volumen en cuestion
+        category:
+          type: string
+          description: categoria a la cual pertenece el producto 
+        price:
+          type: number
+          description: valor monetario del producto 
+        stock:
+          type: number
+          description: cantidad de ejemplares disponibles para la venta 
+      example: 
+        title: Los diarios de la boticaria 01
+        publisher: ECC
+        photo: https://kodoku.cl/cdn/shop/files/sobrecubierta_los_diarios_de_la_boticaria_num1_WEB-DEF_490x.progressive.jpg?v=1706487019
+        category: manga
+        price: 15490
+        stock: 10
+responses:
+    Message200:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al éxito
+        message:
+          type: string
+          description: Texto descriptivo con el éxito en la operación
+      example:
+        statusCode: 200
+        message: productos encontrados 
+    Message201:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al éxito en la creación
+        message:
+          type: string
+          description: Texto descriptivo con el éxito en la creación
+      example:
+        statusCode: 201
+        message: a new product has been created
+    Response200one:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al éxito devolviendo datos
+        response:
+          type: object
+          description: Objeto con los datos del recurso solicitado          
+      example:
+        statusCode: 200
+        response:
+        title: Los diarios de la boticaria 01
+        publisher: ECC
+        photo: https://kodoku.cl/cdn/shop/files/sobrecubierta_los_diarios_de_la_boticaria_num1_WEB-DEF_490x.progressive.jpg?v=1706487019
+        category: manga
+        price: 15490
+        stock: 10
+    Response200all:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al éxito devolviendo datos
+        response:
+          type: array
+          description: Array de objetos del recurso solicitado
+      example:
+        statusCode: 200
+        response:
+          - title: Bakemonogatari 03
+            publisher: Panini México
+            price: 12990
+            category: manga
+            photo: www.mifoto.com/igna.png
+            stock: 10
+          - title: Slam Dunk 07
+            publisher: Ivrea Espa{a}
+            price: 13990
+            category: manga
+            photo: www.mifoto.com/igna.png
+            stock: 5
+          - title: Vagabond 01 
+            publisher: Ivrea Argentina
+            price: 9490
+            category: manga
+            photo: www.mifoto.com/igna.png
+            stock: 10
+    Paginate:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al éxito devolviendo datos paginados
+        response:
+          type: array
+          description: Array de objetos del recurso solicitado paginados y ordenados
+        info:
+          type: object
+          description: Datos de la paginación
+      example:
+        statusCode: 200
+        response:
+          - title: Bakemonogatari 03
+            publisher: Panini México
+            price: 12990
+            category: manga
+            photo: www.mifoto.com/igna.png
+            stock: 10
+          - title: Slam Dunk 07
+            publisher: Ivrea Espa{a}
+            price: 13990
+            category: manga
+            photo: www.mifoto.com/igna.png
+            stock: 5
+          - title: Vagabond 01 
+            publisher: Ivrea Argentina
+            price: 9490
+            category: manga
+            photo: www.mifoto.com/igna.png
+            stock: 10
+        info:
+          next: null
+          prev: null
+    Error400:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al fracaso por problemas del cliente
+        message:
+          type: string
+          description: Texto descriptivo con mensaje de error por parte del cliente
+      example:
+        statusCode: 400
+        message: Incomplete data on mid
+    Error401:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al fracaso de autenticación
+        message:
+          type: string
+          description: Texto descriptivo con mensaje de error de autenticacion
+      example:
+        statusCode: 401
+        message: Bad auth from policies!
+    Error403:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al fracaso de autorización
+        message:
+          type: string
+          description: Texto descriptivo con mensaje de error de autorizacion
+      example:
+        statusCode: 403
+        message: Forbidden from policies!
+    Error404:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al fracaso por no encontrar lo solocitado
+        message:
+          type: string
+          description: Texto descriptivo con mensaje de error de no encontrado el recurso
+      example:
+        statusCode: 404
+        message: Not found docs
+    Error500:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int64
+          description: Codigo de estado correrspondiente a la solicitud al fracaso por error fatal en el servidor
+        message:
+          type: string
+          description: Texto descriptivo con mensaje de error por parte del servidor
+      example:
+        statusCode: 500
+        message: CODER API ERROR
+paths: 
+  /api/products:
+    get:
+      summary: Ruta para la consulta de todos los productos
+      tags: 
+        - Products
+      response: 
+        200: 
+          description: The list of the products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        404:
+          description: Fallo en la lectura de productos 
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error404'
+    post:
+      summary: Ruta para la creación de productos 
+      tags: 
+        - Products
+      requestBody:
+        required: true
+        description: Datos para la creción de un producto 
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      response:
+        201:
+          description: Exito en el registro de un producto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Message201'
+        400:
+          description: Fracaso por datos incompletos 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+  /api/products/{id}:
+    put:
+      summary: Actualización de los datos de un producto a traves de la lectura de id
+      tags: 
+        - Products
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: The product id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        200:
+          description: The product was updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        400:
+          description: Fracaso por datos incompletos o mal pasados
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+    delete:
+      summary: Remove a product by id
+      tags: 
+        [Products]
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: The product id
+      responses:
+        200:
+          description: The product was deleted
+        404:
+          $ref: '#/components/responses/NotFound'

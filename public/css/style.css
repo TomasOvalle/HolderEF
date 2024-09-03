@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+.productsContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.banner-a{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.banners-b{
+    justify-content: center;
+    align-items: center;
+}
+
+.banners-b .banners-b-img{
+    margin-top: 50px;
+    gap: 100px;
+}
+
+.banners-b .banners-b-img img{
+    height: 500px;
+}
+
+.data{
+    margin-top: 60px;
+}
+
+.Politics{
+    height: 150px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.Politics .item .item-categories{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    padding: 1rem;
+    margin-top: 6px;
+    margin-bottom: 9px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.Politics .item .item-categories:hover {
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+.Politics .item .item-categories .item-sizes{
+    height: 100%;
+    aspect-ratio: var(--aspect-ratio);
+    overflow: hidden;
+}
+
+.Politics .item .item-categories .item-sizes picture{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.Politics .item .item-categories .item-sizes picture img{
+    width: 100%;
+    height: 100%;
+}
+
+.Politics .item .item-categories .item-title{
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    margin: 0;
+    height: fit-content;
+    color: black;
+}
+
+.title-ds{
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.title-ds h2{
+    font-size: 60px;
+}
+
+.demographies{
+    margin-top: 50px;
+}
+
+.demographies .demographies-title-img{
+    position: relative;
+}
+
+.demographies .demographies-title-img img{
+    height: 700px;
+    width: 512px;
+    margin-left: 10px;
+}
+
+.demographies .demographies-title-img h4{
+    font-size: 45px;
+    position: absolute;
+    left: 270px;
+    top: 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px 8px 0 0;
+}
+
+.demographies .shonenContainer .shonenIndex{
+    padding-left: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.demographies .shonenContainer .shonenIndex img{
+    margin-right: 75px;
+}
+
+.demographies .seinenContainer .seinenIndex{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.demographies .seinenContainer .seinenIndex img{
+    margin-right: 75px;
+}
+
+.demographies .joseiContainer .joseiIndex{
+    margin-top: 15px;
+    padding-left: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.demographies .joseiContainer .joseiIndex img{
+    margin-right: 75px;
+}
+
+.demographies .shojoContainer .shojoIndex{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.demographies .shojoContainer .shojoIndex img{
+    margin-right: 75px;
+    object-fit: contain;
+    transition: 1s ease;
+}
+
+.demographies .shojoContainer .shojoIndex img:hover {
+    transform: scale(1.1);
+}
+
+
+.footer{
+    background-color: black;
+    margin-top: 250px;
+    justify-content: center;
+    gap: 70px;
+}
+
+.footer h5{
+    padding-top: 10px;
+    color: white;
+}
+
+.footer p{
+    color: white;
+}

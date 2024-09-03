@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "9bb4eb3cf271e823179242ef",
+    "email": "stark@coder",
+    "password": "$2b$10$gLZwMNxfsZrw87PaVcc3veki9wp65oRWY3bZV7ADQxHX2Qar0ol5m",
+    "role": 0,
+    "age": 12,
+    "photo": "https://i.postimg.cc/wTgNFWhR/profile.png",
+    "verify": false,
+    "verifyCode": "07f8aa36dfc173c3d5ce21e0",
+    "createdAt": "2024-06-24T17:52:16.126Z",
+    "updatedAt": "2024-06-24T17:52:16.126Z"
+  },
+  {
+    "_id": "24f2c747e0979956cf22b8b3",
+    "email": "frieren@coder",
+    "password": "$2b$10$tJE9A0.3jfkOuoh1muxKiudCtEn1pq6Vd6NzuB8BmxnGnVxNqdPoC",
+    "role": 0,
+    "age": 12,
+    "photo": "https://i.postimg.cc/wTgNFWhR/profile.png",
+    "verify": false,
+    "verifyCode": "b54069e70ccaf4760d134f38",
+    "createdAt": "2024-06-26T21:40:25.438Z",
+    "updatedAt": "2024-06-26T21:40:25.438Z"
+  }
+]

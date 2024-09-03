@@ -1,0 +1,68 @@
+[
+    {
+        "_id": "8babbebe92e090a4f86c8a29",
+        "title": "Aoha Ride 10",
+        "publisher": "Ivrea ESP",
+        "category": "manga",
+        "price": 10990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/9788416604111_490x.progressive.jpg?v=1671167033",
+        "createdAt": "2024-06-14T00:18:25.076Z",
+        "updatedAt": "2024-06-14T00:18:25.076Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a30",
+        "title": "Blomm into You 03",
+        "publisher": "Planeta Cómic",
+        "category": "manga",
+        "price": 13900,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/bloomintoyou3_490x.progressive.jpg?v=1635884570",
+        "createdAt": "2024-06-14T00:18:26.976Z",
+        "updatedAt": "2024-06-14T00:18:26.976Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a31",
+        "title": "Horimiya 14",
+        "publisher": "Norma Editorial",
+        "category": "manga",
+        "price": 11990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/6585222f7db64f4f10094ab98cd484bf0906a913_490x.progressive.jpg?v=1668999720",
+        "createdAt": "2024-06-14T00:18:27.876Z",
+        "updatedAt": "2024-06-14T00:18:27.876Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a32",
+        "title": "Réquiem por el Rey de la Rosa 15",
+        "publisher": "TomoDomo",
+        "category": "manga",
+        "price": 10490,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/ef17e96b872640e1a9b5b04c986e544f_490x.progressive.jpg?v=1650377602",
+        "createdAt": "2024-06-14T00:18:28.836Z",
+        "updatedAt": "2024-06-14T00:18:28.836Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a33",
+        "title": "Signos de Afecto 06",
+        "publisher": "Arechi",
+        "category": "manga",
+        "price": 15490,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/files/Signos-Afecto-vol.6-scaled_490x.progressive.jpg?v=1709659366",
+        "createdAt": "2024-06-14T00:18:29.816Z",
+        "updatedAt": "2024-06-14T00:18:29.816Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a34",
+        "title": "Still Sick 02",
+        "publisher": "Babylon",
+        "category": "manga",
+        "price": 12390,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/875f9ca0616244da82696fe1ea2dbe43_490x.progressive.jpg?v=1639576463",
+        "createdAt": "2024-06-14T00:18:30.416Z",
+        "updatedAt": "2024-06-14T00:18:30.416Z"
+    }
+]

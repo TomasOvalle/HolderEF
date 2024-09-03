@@ -1,0 +1,68 @@
+[
+    {
+        "_id": "8babbebe92e090a4f86c8a23",
+        "title": "Given 01",
+        "publisher": "Milky Way",
+        "category": "manga",
+        "price": 15990,
+        "stock": 11,
+        "photo": "https://kodoku.cl/cdn/shop/files/Given_1_C_490x.progressive.webp.jpg?v=1684783419",
+        "createdAt": "2024-06-14T00:18:19.222Z",
+        "updatedAt": "2024-06-14T00:18:19.222Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a24",
+        "title": "Josée, El tigre y los peces 2",
+        "publisher": "Planeta Cómic",
+        "category": "manga",
+        "price": 11900,
+        "stock": 3,
+        "photo": "https://kodoku.cl/cdn/shop/files/356730_portada_josee-el-tigre-y-los-peces-n-0202_nao-emoto_202111101048_490x.progressive.jpg?v=1712684213",
+        "createdAt": "2024-06-14T00:18:20.256Z",
+        "updatedAt": "2024-06-14T00:18:20.256Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a25",
+        "title": "Paradise Kiss 01",
+        "publisher": "Ivrea ESP",
+        "category": "manga",
+        "price": 17990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/9788418963674_490x.progressive.jpg?v=1644939850",
+        "createdAt": "2024-06-14T00:18:21.278Z",
+        "updatedAt": "2024-06-14T00:18:21.278Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a26",
+        "title": "Kowloon 04",
+        "publisher": "Norma Editorial",
+        "category": "manga",
+        "price": 11990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/9ab56db2c0aa30bfdb99b7bee19f079d0f71052f_490x.progressive.jpg?v=1675648396",
+        "createdAt": "2024-06-14T00:18:22.263Z",
+        "updatedAt": "2024-06-14T00:18:22.263Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a27",
+        "title": "Las Mentiras de la Profesora 01", 
+        "publisher": "Panini ESP",
+        "category": "manga",
+        "price": 25990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/files/ssens001_0_1_490x.progressive.webp.jpg?v=1684784525",
+        "createdAt": "2024-06-14T00:18:23.189Z",
+        "updatedAt": "2024-06-14T00:18:23.189Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a28",
+        "title": "Sweetness & Lightning",
+        "publisher": "Planeta Cómic",
+        "category": "manga",
+        "price": 14900,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/files/portada_sweetness-lightning-n-0105_amagakure-gido_201905091452_490x.progressive.jpg?v=1686675655",
+        "createdAt": "2024-06-14T00:18:24.186Z",
+        "updatedAt": "2024-06-14T00:18:24.186Z"
+    }
+]

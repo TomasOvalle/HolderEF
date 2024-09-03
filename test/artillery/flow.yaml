@@ -1,0 +1,24 @@
+config:
+  pluggins:
+    metrics-by-endpoint : {}
+  target: http://localhost:8080/api
+  phases:
+    - duration: 10
+      arrivalRate: 50
+scenarios:
+  - name: login
+    flow:
+      - log: login
+      - post: 
+          url: /sessions/login
+          json:
+            email: tomas@coder.com
+            password: hola1234
+      - log: read all products
+      - get:
+          url: /products
+      - log: create product
+      - post:
+          url: /products
+          json:
+            title: Elden Ring

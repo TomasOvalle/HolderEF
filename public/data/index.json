@@ -1,0 +1,79 @@
+[
+    {
+        "_id": "6b2c1f5b404c410cefa7e391",
+        "title": "Delicious in Dungeon 01",
+        "publisher": "publisher",
+        "category": "manga",
+        "price": 1,
+        "stock": 10,
+        "photo": "https://clubdelgoblin.com/cdn/shop/files/1088eb0670d7414286975826733506a3_205x.jpg?v=1710873833",
+        "createdAt": "2024-06-14T00:17:53.349Z",
+        "updatedAt": "2024-06-14T00:17:53.349Z"
+    },
+    {
+        "_id": "033eae43187a4a19f79372ab",
+        "title": "Dandadan 01",
+        "publisher": "publisher",
+        "category": "manga",
+        "price": 1,
+        "stock": 10,
+        "photo": "https://clubdelgoblin.com/cdn/shop/products/pre1_b6f4ca89-050f-4a57-9a89-6ddff3d9ae61_253x.jpg?v=1684516826",
+        "createdAt": "2024-06-14T00:19:13.667Z",
+        "updatedAt": "2024-06-14T00:19:13.667Z"
+    },
+    {
+        "_id": "261f6545d2b16d395e7a9d86",
+        "title": "Los diarios de la boticaria 01",
+        "publisher": "publisher",
+        "category": "manga",
+        "price": 1,
+        "stock": 10,
+        "photo": "https://clubdelgoblin.com/cdn/shop/files/72239956d7fe415f8bc4528254520736_253x.jpg?v=1712258186",
+        "createdAt": "2024-06-14T00:20:26.570Z",
+        "updatedAt": "2024-06-14T00:20:26.570Z"
+    },
+    {
+        "_id": "3ea45f069775972f55338015",
+        "title": "Skip and Loafer 07",
+        "publisher": "publisher",
+        "category": "manga",
+        "price": 1,
+        "stock": 10,
+        "photo": "https://clubdelgoblin.com/cdn/shop/files/skip_loafer_7_1_253x.jpg?v=1707939446",
+        "createdAt": "2024-06-14T00:20:59.103Z",
+        "updatedAt": "2024-06-14T00:20:59.103Z"
+    },
+    {
+        "_id": "67df44319e9ea0988ae9216e",
+        "title": "Frieren 09",
+        "publisher": "publisher",
+        "category": "manga",
+        "price": 1,
+        "stock": 10,
+        "photo": "https://clubdelgoblin.com/cdn/shop/files/frieren09_1_253x.jpg?v=1706798308",
+        "createdAt": "2024-06-14T00:24:03.199Z",
+        "updatedAt": "2024-06-14T00:24:03.199Z"
+    },
+    {
+        "_id": "2b055685753e933dee393366",
+        "title": "Sakamoto Days 09",
+        "publisher": "publisher",
+        "category": "manga",
+        "price": 1,
+        "stock": 10,
+        "photo": "https://clubdelgoblin.com/cdn/shop/files/sakamoto09_253x.jpg?v=1699382515",
+        "createdAt": "2024-06-14T00:27:36.647Z",
+        "updatedAt": "2024-06-14T00:27:36.647Z"
+    },
+    {
+        "_id": "bb38064eeb219f1a4e673c07",
+        "title": "Los diarios de la boticaria",
+        "publisher": "Panini México",
+        "category": "manga",
+        "price": 15990,
+        "stock": 10,
+        "photo": "https://clubdelgoblin.com/cdn/shop/files/7dc811294b544719a9a4589b214683e4_230x.jpg?v=1711057215",
+        "createdAt": "2024-06-14T00:30:46.649Z",
+        "updatedAt": "2024-06-14T00:30:46.649Z"
+    }
+]

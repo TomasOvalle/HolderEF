@@ -1,0 +1,11 @@
+[
+  {
+    "_id": "54a9ec4eae9e45672c8c046a",
+    "user_id": "9bb4eb3cf271e823179242ef",
+    "product_id": "935402159584ecdbfdb0f5e3",
+    "quantity": 2,
+    "state": "reserved",
+    "createdAt": "2024-06-26T21:47:15.879Z",
+    "updatedAt": "2024-06-26T21:47:15.879Z"
+  }
+]

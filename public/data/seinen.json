@@ -1,0 +1,68 @@
+[
+    {
+        "_id": "8babbebe92e090a4f86c8a16",
+        "title": "Atelier Of Witch Hat 01",
+        "publisher": "Milky Way",
+        "category": "manga",
+        "price": 15990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/Atelier_of_Witch_Hat_01_490x.progressive.webp.jpg?v=1682311748",
+        "createdAt": "2024-06-14T00:18:13.368Z",
+        "updatedAt": "2024-06-14T00:18:13.368Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a18",
+        "title": "Blame! Master Edition 03",
+        "publisher": "Panini España",
+        "category": "manga",
+        "price": 37990,
+        "stock": 15,
+        "photo": "https://kodoku.cl/cdn/shop/products/SBMAS003_0_490x.progressive.png.jpg?v=1670816037",
+        "createdAt": "2024-06-14T00:18:14.458Z",
+        "updatedAt": "2024-06-14T00:18:14.458Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a19",
+        "title": "Blue Period 06",
+        "publisher": "Milky Way",
+        "category": "manga",
+        "price": 15990,
+        "stock": 12,
+        "photo": "https://kodoku.cl/cdn/shop/files/Blue_Period_6_490x.progressive.webp.jpg?v=1684783060",
+        "createdAt": "2024-06-14T00:18:15.938Z",
+        "updatedAt": "2024-06-14T00:18:15.938Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a20",
+        "title": "Dead Dead Demons Dededede Destruction",
+        "publisher": "Norma Editorial",
+        "category": "manga",
+        "price": 12990,
+        "stock": 5,
+        "photo": "https://kodoku.cl/cdn/shop/products/22bd07ec1354cc48b87962308209f5f1f1a81173_490x.progressive.jpg?v=1644947942",
+        "createdAt": "2024-06-14T00:18:16.421Z",
+        "updatedAt": "2024-06-14T00:18:16.421Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a21",
+        "title": "Gannibal 03",
+        "publisher": "Arechi",
+        "category": "manga",
+        "price": 15490,
+        "stock": 7,
+        "photo": "https://kodoku.cl/cdn/shop/products/Gannibal-vol3_Portada-900x1272_490x.progressive.jpg?v=1675192053",
+        "createdAt": "2024-06-14T00:18:17.501Z",
+        "updatedAt": "2024-06-14T00:18:17.501Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a22",
+        "title": "Homunculus 09",
+        "publisher": "Ivreas ESP",
+        "category": "manga",
+        "price": 22990,
+        "stock": 13,
+        "photo": "https://kodoku.cl/cdn/shop/files/poridentidad_11_490x.progressive.jpg?v=1719246792",
+        "createdAt": "2024-06-14T00:18:18.321Z",
+        "updatedAt": "2024-06-14T00:18:18.321Z"
+    }
+]

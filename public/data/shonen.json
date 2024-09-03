@@ -1,0 +1,68 @@
+[
+    {
+        "_id": "033eae43187a4a19f79372ab",
+        "title": "Dandadan 01 y 02 (Pack de lanzamiento)",
+        "publisher": "Norma Editorial",
+        "category": "manga",
+        "price": 13990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/0953c0032a1bc14ad277e2ecfb4bd3ad059a38b7_490x.progressive.jpg?v=1662420485",
+        "createdAt": "2024-06-14T00:19:13.667Z",
+        "updatedAt": "2024-06-14T00:19:13.667Z"
+    },
+    {
+        "_id": "67df44319e9ea0988ae9216e",
+        "title": "Frieren 09",
+        "publisher": "Norma Editorial",
+        "category": "manga",
+        "price": 13990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/files/54771756593cf5568ce86e04662c39132ef186c4_490x.progressive.jpg?v=1712596079",
+        "createdAt": "2024-06-14T00:24:03.199Z",
+        "updatedAt": "2024-06-14T00:24:03.199Z"
+    },
+    {
+        "_id": "2b055685753e933dee393366",
+        "title": "Sakamoto Days 09",
+        "publisher": "Ivrea ESP",
+        "category": "manga",
+        "price": 11990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/files/poridentidad_2_71e87daa-a822-47dc-91f8-560b57394b07_490x.progressive.jpg?v=1709659361",
+        "createdAt": "2024-06-14T00:27:36.647Z",
+        "updatedAt": "2024-06-14T00:27:36.647Z"
+    },
+    {
+        "_id": "1b156d6a32f86c0aa38000f3",
+        "title": "Bakemonogatari 14",
+        "publisher": "Panini México",
+        "category": "manga",
+        "price": 12990,
+        "stock": 12,
+        "photo": "https://clubdelgoblin.com/cdn/shop/products/MX_Bakemonogatari_14_Jacket_1200_b766ecf1-3c63-46b8-9ac3-12d9b58d4054_253x.png?v=1660667995",
+        "createdAt": "2024-06-13T23:54:00.058Z",
+        "updatedAt": "2024-06-13T23:54:00.058Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a15",
+        "title": "Chainsaw Man 15",
+        "publisher": "Norma Editorial",
+        "category": "manga",
+        "price": 13990,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/files/1147c3baff1bbef086baed5418ca4c79ef95a392_490x.progressive.jpg?v=1702320855",
+        "createdAt": "2024-06-14T00:18:13.668Z",
+        "updatedAt": "2024-06-14T00:18:13.668Z"
+    },
+    {
+        "_id": "8babbebe92e090a4f86c8a17",
+        "title": "Jigokuraku 10",
+        "publisher": "Norma Editorial",
+        "category": "manga",
+        "price": 13490,
+        "stock": 10,
+        "photo": "https://kodoku.cl/cdn/shop/products/96cbaa96db5b7e8ed9a5b24896cc5869a37d0f4a_490x.progressive.jpg?v=1675462626",
+        "createdAt": "2024-06-14T00:18:13.668Z",
+        "updatedAt": "2024-06-14T00:18:13.668Z"
+    }
+]
