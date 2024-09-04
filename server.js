@@ -52,10 +52,6 @@ server.use(express.json());
 server.use(express.urlencoded({extended: true }));
 
 server.use(express.static(__dirname + "/public"));
-//Se agrego esta línea para intentar resolver un error en el despliegue 
-server.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
-});
 
 server.use(winston);
 server.use(cookieParser(environment.SECRET_COOKIE));
