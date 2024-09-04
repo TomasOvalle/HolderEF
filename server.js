@@ -53,7 +53,7 @@ server.use(express.urlencoded({extended: true }));
 
 server.use(express.static(__dirname + "/public"));
 //Se agrego esta línea para intentar resolver un error en el despliegue 
-app.get('/', (req, res) => {
+server.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
