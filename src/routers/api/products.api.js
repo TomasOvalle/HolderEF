@@ -3,9 +3,9 @@ import { create, readPrem, read, paginate, readOne, update, destroy } from "../.
 //import productsManager from "../../data/mongo/manager/ProductsManager.mongo.js"
 //import isValidAdmin from "../../middlewares/isValidAdmin.mid.js";
 //DE AQUI HACIA ABAJO SON NUEVOS MIDDLEWARES CREADOS PARA LA ENTREGA FINAL
-import authorizeProductPurchase from "../../middlewares/authorizeProductPurchase.mid.js";
-import filterProducts from "../../middlewares/FilterProducts.mid.js";
-import isValidPrem from "../../middlewares/isValidPrem.mid.js";
+//import authorizeProductPurchase from "../../middlewares/authorizeProductPurchase.mid.js";
+//import filterProducts from "../../middlewares/FilterProducts.mid.js";
+//import isValidPrem from "../../middlewares/isValidPrem.mid.js";
 
 // se cambio el ["ADMIN"] de create, update, destroy, por ["PUBLIC"] para realizar pruebas en Fs, además de comentar el middleware isvalidAdmin
 class ProductsRouter extends CustomRouter {

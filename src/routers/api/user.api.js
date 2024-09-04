@@ -1,6 +1,6 @@
 import CustomRouter from "../CustomRouter.js";
 //import usersManager from "../../data/mongo/manager/UsersManager.mongo.js"
-import { create, read, readOne, readByEmail, update, destroy } from "../../controllers/users.controller.js";
+import { create, read, readOne, /*readByEmail,*/ update, destroy } from "../../controllers/users.controller.js";
 
 //Se cambio todos los ["USER"] por ["PUBLIC"], para realizar las pruebas de Fs
 class UsersRouter extends CustomRouter {
