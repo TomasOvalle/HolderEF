@@ -5,8 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "node ./server.js -p 9000",
-    "start": "nodemon ./server.js --env=dev",
+    "start": "node ./server.js -p 9000",
+    "dev": "nodemon ./server.js --env=dev",
     "prod": "nodemon ./server.js -p 8081 --env=prod",
     "fs": "nodemon ./server.js -p 8082 --env=test --persistence fs",
     "products": "node ./src/mocks/products.mock.js --env=dev",

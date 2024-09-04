@@ -50,7 +50,13 @@ const specs = swaggerJSDoc(configs);
 // middlewares
 server.use(express.json());
 server.use(express.urlencoded({extended: true }));
-server.use(express.static(__dirname + "/public"))
+
+server.use(express.static(__dirname + "/public"));
+//Se agrego esta línea para intentar resolver un error en el despliegue 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 server.use(winston);
 server.use(cookieParser(environment.SECRET_COOKIE));
 server.use(compression({ brotli: { enabled: true, zlib: {} },}));
