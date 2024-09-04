@@ -1,6 +1,6 @@
 import chai from "chai";
 const { expect } = chai;
-import environment from "../../src/utils/env.util.js";
+//import environment from "../../src/utils/env.util.js";
 import dao from "../../src/data/dao.factory.js";
 const { productsManager } = dao;
 

@@ -1,5 +1,5 @@
 import assert from "assert";
-import environment from "../../src/utils/env.util.js";
+//import environment from "../../src/utils/env.util.js";
 import dao from "../../src/data/dao.factory.js";
 const { productsManager } = dao;
 
