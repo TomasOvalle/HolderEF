@@ -541,3 +541,7 @@
 [33mERROR[39m: GET /online 401 - 19:58:15 - Bad auth from poliecies!
 [33mERROR[39m: GET /online 401 - 19:58:15 - Bad auth from poliecies!
 [33mERROR[39m: GET /online 401 - 19:58:15 - Bad auth from poliecies!
+[33mERROR[39m: GET - /api/products/null - undefined - 03-09-2024, 23:20:55
+[33mERROR[39m: GET /online 401 - 23:20:57 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 23:20:57 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 23:20:57 - Bad auth from poliecies!
