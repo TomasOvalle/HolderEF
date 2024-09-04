@@ -1,9 +1,9 @@
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
-import { Strategy as GoogleStrategy } from "passport-google-oauth2";
-import { createHash, verifyHash } from "../utils/hash.util.js";
+//import { Strategy as GoogleStrategy } from "passport-google-oauth2";
+import { /*createHash,*/ verifyHash } from "../utils/hash.util.js";
 import { Strategy as JWTStrategy, ExtractJwt } from "passport-jwt";
-import usersManager from "../data/mongo/manager/UsersManager.mongo.js";
+//import usersManager from "../data/mongo/manager/UsersManager.mongo.js";
 import { createToken } from "../utils/token.util.js"
 import usersRepository from "../repositories/users.rep.js";
 import UsersDTO from "../dto/users.dto.js";
@@ -67,7 +67,7 @@ passport.use("login", new LocalStrategy (
 
 
 //Esto ya no debe ocupar más sessions
-passport.use("google", new GoogleStrategy(
+/*passport.use("google", new GoogleStrategy(
     { clientID: process.env.GOOGLE_CLIENT_ID, clientSecret: process.env.GOOGLE_CLIENT_SECRET, callbackURL: "http://localhost:8080/api/sessions/google/callback", passReqToCallback: true},
     async (req, accesToken, refreshToken, profile, done) => {
         try {
@@ -92,7 +92,7 @@ passport.use("google", new GoogleStrategy(
             return done (error);
         }
     }
-))
+))*/
 
 passport.use("jwt", new JWTStrategy(
     { jwtFromRequest: ExtractJwt.fromExtractors([(req) => req?.cookies["token"]]),

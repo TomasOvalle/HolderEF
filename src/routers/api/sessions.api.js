@@ -2,8 +2,8 @@ import CustomRouter from "../CustomRouter.js";
 import passport from "../../middlewares/passport.mid.js";
 import passportCb from "../../middlewares/passportCb.mid.js";
 import { register, login, signout, google, profile, verifyCode } from "../../controllers/sessions.controller.js";
-import validator from "../../middlewares/joi.mid.js";
-import usersSchema from "../../schemas/user.schema.js";
+//import validator from "../../middlewares/joi.mid.js";
+//import usersSchema from "../../schemas/user.schema.js";
 
 class SessionsRouter extends CustomRouter {
     init() {
