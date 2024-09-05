@@ -6,7 +6,7 @@ import { create, read, readOne, /*readByEmail,*/ update, destroy } from "../../c
 class UsersRouter extends CustomRouter {
     init() {
         this.create("/", ["USER", "ADMIN", "PREM"], create);
-        this.read("/", ["USER", "ADMIN", "PREM"], read);
+        this.read("/", ["USER", "ADMIN", "PREM", "PUBLIC"], read);
         //this.read("/:email", ["PUBLIC"], readByEmail);
         this.read("/:uid", ["USER", "ADMIN", "PREM"], readOne);
         this.update("/:uid", ["USER", "ADMIN", "PREM"], update);
