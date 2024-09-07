@@ -568,3 +568,21 @@
 [33mERROR[39m: GET /online 401 - 12:42:02 - Bad auth from poliecies!
 [33mERROR[39m: GET /online 401 - 12:42:02 - Bad auth from poliecies!
 [33mERROR[39m: GET /online 401 - 12:48:43 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 11:05:06 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 11:05:08 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 11:05:08 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 11:05:08 - Bad auth from poliecies!
+[33mERROR[39m: POST / 401 - 11:06:21 - Bad auth from poliecies!
+[33mERROR[39m: GET - /api/products/null - undefined - 06-09-2024, 11:07:05
+[33mERROR[39m: POST / 401 - 11:07:12 - Bad auth from poliecies!
+[33mERROR[39m: DELETE - /api/products/66db1c2a5fb93ceaade8c85 - undefined - 06-09-2024, 11:14:00
+[33mERROR[39m: GET / 403 - 13:38:19 - Forbidden from poliecies!
+[33mERROR[39m: GET /online 401 - 14:40:16 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 14:40:17 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 14:40:18 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 14:40:19 - Bad auth from poliecies!
+[33mERROR[39m: GET /online 401 - 14:40:19 - Bad auth from poliecies!
+[33mERROR[39m: POST - /api/sessions/login - 400 - 07-09-2024, 15:02:36
+[33mERROR[39m: POST / 401 - 15:17:50 - Bad auth from poliecies!
+[33mERROR[39m: POST - /api/sessions/register - undefined - 07-09-2024, 15:31:41
+[33mERROR[39m: POST - /api/sessions/register - undefined - 07-09-2024, 15:32:38

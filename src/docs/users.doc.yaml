@@ -215,3 +215,266 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/responses/Error500'
+  /api/sessions/login:
+    post:
+      summary: Ruta para el inicio de sesión de un usuario en nuestro servidor
+      tags:
+        - User
+      requestBody:
+        required: true
+        description: Datos para poder iniciar la sesión de un usuario 
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        200:
+          description: Exito en el inicio de sesión de un usuario
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Response200one'
+        400:
+          description: Fracaso por error en los datos enviados, faltan datos o se enviaron datos erroneos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+        500:
+          description: Fracaso por error fatal del servidor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error500'
+  /api/sessions/signout:
+    post:
+      summary: Ruta para cerrar la sesión de un usuario que se encuentra en línea
+      tags:
+        - User
+      requestBody:
+        required: true
+        description: Datos para poder cerrar la sesión
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        200:
+          description: Exito en el cierre de sesión de un usuario 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Response200one'
+        400: 
+          description: Fracaso por error en el cierre de sesión 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+        500:
+          description: Fracaso por error fatal del servidor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error500'
+  /api/sessions/verify:
+    post:
+      summary: Ruta para verificar al usuario que se registra atraves de un codigo enviado al correo
+      tags:
+        - User
+      requestBody:
+        required: true
+        description: Datos para poder verificar a un usuario
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        200:
+          description: Exito en la verificación de un usuario 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Response200one'
+        400:
+          description: Fracaso en la verificación del usuario
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+        500:
+          description: Fracaso por error fatal en el servidor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error500'
+  /api/users:
+    get:
+      summary: Ruta para obtener una lista de todos los usuarios 
+      tags:
+        - User
+      responses:
+        200:
+          description: Exito al obtener la lista de usuarios
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Response200all'
+        400:
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+        500:
+          description: Error en el servidor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error500'
+    post:
+      summary: Ruta para crear un nuevo usuario
+      tags:
+        - User
+      requestBody:
+        required: true
+        description: Datos del nuevo usuario
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        201:
+          description: Usuario creado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Message201'
+        400:
+          description: Error en lo datos enviados
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+        500:
+          description: Error en el servidor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error500'
+  /api/users/{uid}:
+    get:
+      summary: Ruta para obtener un usuario especifico mediante su id
+      tags:
+        - User
+      requestBody:
+        required: true
+        description: datos para buscar al usuario
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        200:
+          description: Exito al obtener el usuario
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Response200one'
+        400:
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+        404:
+          description: Usuario no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error404'
+        500:
+          description:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error500'
+    put:
+      summary: Actualizar un usuario por su id
+      tags:
+        - User
+      parameters:
+        name: uid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Id del usuario a actualizar
+      requestBody:
+        required: true
+        description: Datos para actualizar el usuario
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        200:
+          description: Usuario actualizado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Message200'
+        400:
+          description: Error en los datos enviados
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+        404:
+          description: Usuario no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error404'
+        500:
+          description: Error en el servidor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error500'
+    delete:
+      summary: Elimina un usuario especifico por su ID
+      tags:
+      - User
+      parameters:
+        name: uid
+        in: path
+        required: true
+        schema:
+          type: string
+        description: ID del usuario a eliminar
+      responses:
+        200:
+          description: Usuario eliminado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Message200'
+        400:
+          description: Error en la solicitud
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error400'
+        404:
+          description: Usuario no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error404'
+        500:
+          description: Error en el servidor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/Error500'

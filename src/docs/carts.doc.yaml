@@ -1,34 +1,18 @@
 components:
   schemas:
-    Products:
+    Carts:
       type: object
       properties:
-        title:
-          type: string
-          description: Title of the product
-        publisher: 
-          type: string
-          description: publisher of the product
-        photo: 
-          type: string
-          description: url de la foto de la portada del manga/novela correspondiente al volumen en cuestion
-        category:
-          type: string
-          description: categoria a la cual pertenece el producto 
-        price:
+        quantity:
           type: number
-          description: valor monetario del producto 
-        stock:
-          type: number
-          description: cantidad de ejemplares disponibles para la venta 
-      example: 
-        title: Los diarios de la boticaria 01
-        publisher: ECC
-        photo: https://kodoku.cl/cdn/shop/files/sobrecubierta_los_diarios_de_la_boticaria_num1_WEB-DEF_490x.progressive.jpg?v=1706487019
-        category: manga
-        price: 15490
-        stock: 10
-responses:
+          description: cantidad del producto que añadio al carrito
+        state:
+          type: string
+          description: estado de la compra del producto 
+      example:
+        quantity: 1
+        state: "reserved"
+  responses:
     Message200:
       type: object
       properties:
@@ -41,7 +25,7 @@ responses:
           description: Texto descriptivo con el éxito en la operación
       example:
         statusCode: 200
-        message: productos encontrados 
+        message: Producto añadido con exito al carrito
     Message201:
       type: object
       properties:
@@ -54,7 +38,7 @@ responses:
           description: Texto descriptivo con el éxito en la creación
       example:
         statusCode: 201
-        message: a new product has been created
+        message: Carrito creado con exito
     Response200one:
       type: object
       properties:
@@ -68,12 +52,8 @@ responses:
       example:
         statusCode: 200
         response:
-        title: Los diarios de la boticaria 01
-        publisher: ECC
-        photo: https://kodoku.cl/cdn/shop/files/sobrecubierta_los_diarios_de_la_boticaria_num1_WEB-DEF_490x.progressive.jpg?v=1706487019
-        category: manga
-        price: 15490
-        stock: 10
+          quantity: 1
+          state: "reserved" 
     Response200all:
       type: object
       properties:
@@ -87,24 +67,12 @@ responses:
       example:
         statusCode: 200
         response:
-          - title: Bakemonogatari 03
-            publisher: Panini México
-            price: 12990
-            category: manga
-            photo: www.mifoto.com/igna.png
-            stock: 10
-          - title: Slam Dunk 07
-            publisher: Ivrea Espa{a}
-            price: 13990
-            category: manga
-            photo: www.mifoto.com/igna.png
-            stock: 5
-          - title: Vagabond 01 
-            publisher: Ivrea Argentina
-            price: 9490
-            category: manga
-            photo: www.mifoto.com/igna.png
-            stock: 10
+          - quantity: 1
+            state: "reserved"
+          - quantity: 2
+            state: "paid"
+          - quantity: 3
+            state: "delivered"
     Paginate:
       type: object
       properties:
@@ -121,24 +89,12 @@ responses:
       example:
         statusCode: 200
         response:
-          - title: Bakemonogatari 03
-            publisher: Panini México
-            price: 12990
-            category: manga
-            photo: www.mifoto.com/igna.png
-            stock: 10
-          - title: Slam Dunk 07
-            publisher: Ivrea Espa{a}
-            price: 13990
-            category: manga
-            photo: www.mifoto.com/igna.png
-            stock: 5
-          - title: Vagabond 01 
-            publisher: Ivrea Argentina
-            price: 9490
-            category: manga
-            photo: www.mifoto.com/igna.png
-            stock: 10
+          - quantity: 1
+            state: "reserved"
+          - quantity: 1
+            state: "reserved"
+          - quantity: 1
+            state: "reserved"
         info:
           next: null
           prev: null
@@ -207,90 +163,90 @@ responses:
       example:
         statusCode: 500
         message: CODER API ERROR
-paths: 
-  /api/products:
+paths:
+  /api/carts:
     get:
-      summary: Ruta para la consulta de todos los productos
-      tags: 
-        - Products
-      response: 
-        200: 
-          description: The list of the products
+      summary: Ruta para consultar todos los carritos
+      tags:
+        - Carts
+      response:
+        200:
+          description: Lista de carritos
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Product'
+                  $ref: '#/components/schemas/Carts'
         404:
-          description: Fallo en la lectura de productos 
-          content: 
+          description: Fallo en la lectura de los carritos
+          content:
             application/json:
               schema:
                 $ref: '#/components/responses/Error404'
         500:
-          description: Fracaso por error fatal en el servidor
+          description: Error de servidor
           content:
             application/json:
               schema:
                 $ref: '#/components/responses/Error500'
     post:
-      summary: Ruta para la creación de productos 
-      tags: 
-        - Products
+      summary: Ruta para la creación de un carrito
+      tags:
+        - Carts
       requestBody:
         required: true
-        description: Datos para la creción de un producto 
+        description: Datos para la creación de un carrito
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Product'
+              $ref: '#/components/schemas/Carts'
       response:
         201:
-          description: Exito en el registro de un producto
+          description: Exito en la creación de un carrito
           content:
             application/json:
               schema:
                 $ref: '#/components/responses/Message201'
         400:
-          description: Fracaso por datos incompletos 
+          description: Fracaso por datos erroneos
           content:
             application/json:
               schema:
                 $ref: '#/components/responses/Error400'
         500:
-          description: Fracaso por error fatal en el servidor
+          description: Error del servidor
           content:
             application/json:
               schema:
                 $ref: '#/components/responses/Error500'
-  /api/products/{pid}:
+  /api/carts/{uid}:
     put:
-      summary: Actualización de los datos de un producto a traves de la lectura de id
-      tags: 
-        - Products
+      summary: Actualización de propiedades del carrito en cuestión
+      tags:
+        - Carts
       parameters:
         - in: path
-          name: pid
+          name: uid
           schema:
             type: string
           required: true
-          description: Product id
+          description: user id
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Product'
-      responses:
+              $ref: '#/components/schemas/Carts'
+      response:
         200:
-          description: The product was updated
+          description: el carrito fue actualizado
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Product'
+                $ref: '#/components/schemas/Carts'
         400:
-          description: Fracaso por datos incompletos o mal pasados
+          description:: Fracaso por datos erroneos
           content:
             application/json:
               schema:
@@ -302,54 +258,36 @@ paths:
               schema:
                 $ref: '#/components/responses/Error500'
     delete:
-      summary: Remove a product by id
-      tags: 
-        [Products]
+      summary: eliminación de un carrito
+      tags:
+        - Carts
       parameters:
         - in: path
-          name: id
+          name: uid
           schema:
             type: string
           required: true
-          description: The product id
-      responses:
-        200:
-          description: The product was deleted
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Product'
-        400:
-          description: Fallo en los datos utilizados para eliminar el producto
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/responses/Error400'
-        404:
-          description: Error al intentar eliminar un producto que ya fue eliminado
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/responses/Error404'
-        500:
-          description: Error en el servidor 
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/responses/Error500'
-    get:
-      summary: Ruta para la consulta de un producto mediante su product id
-      tags:
-        - Products
+          description: id del usuario al que pertenece el carrito
       response:
         200:
-          description: Exito en la lectura del producto
+          description: exito en la eliminación del carrito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    get:
+      summary: Ruta para la consulta de un carrito mediante el id del usuario al que pertenece
+      tags:
+        - Carts
+      response:
+        200:
+          description: Exito en la lectura del carrito
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Product'
         404:
-          description: Fallo en la lectura del producto
+          description: Fallo en la lectura del carrito
           content:
             application/json:
               schema:
