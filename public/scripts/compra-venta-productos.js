@@ -7,7 +7,7 @@ async function cvProducts() {
         const user = response.response;
         console.log("User role:", user.role);
 
-        if (user.role === 2) {
+        if (user.role === 2 || user.role === 1) {
             console.log("Prem user detected:", user);
 
             let res = await fetch("/api/products/");
