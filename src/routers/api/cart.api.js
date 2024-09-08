@@ -5,11 +5,11 @@ import { create, read, readOne, update, destroy} from "../../controllers/carts.c
 // Todo estaba con ["USER"] y se cambio ["USER"] POR ["PUBLIC"] para la pruebas de fs
 class CartsRouter extends CustomRouter {
     init() {
-        this.create("/", ["USER"], create);
-        this.read("/", ["USER"], read);
-        this.read("/:uid", ["USER"], readOne);
-        this.update("/:uid", ["USER"], update);
-        this.destroy("/:uid", ["USER"], destroy);
+        this.create("/", ["USER", "PREM"], create);
+        this.read("/", ["USER", "PREM"], read);
+        this.read("/:uid", ["USER", "PREM"], readOne);
+        this.update("/:uid", ["USER", "PREM"], update);
+        this.destroy("/:uid", ["USER", "PREM"], destroy);
     }
 }
 
