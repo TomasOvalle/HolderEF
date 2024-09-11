@@ -10,7 +10,7 @@ async function printConditions2() {
             document.querySelector("#conditions2").innerHTML = template;
         }
     } catch (error) {
-        
+        console.log(error);
     }
 }
 

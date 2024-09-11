@@ -8,7 +8,7 @@ async function cvProducts() {
         console.log("User role:", user.role);
 
         if (user.role === 2 || user.role === 1 || user.role === 0) {
-            console.log("Prem user detected:", user);
+            console.log("User detected:", user);
 
             const category = "libro";
             console.log(category);
