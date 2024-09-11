@@ -11,13 +11,14 @@ const template = (data) => `
         </figure>
     </div>`;
 
-async function fetchProducts(filter, limit = 30) {
+async function fetchProducts(limit = 30) {
     try {
         const query = location.search
         const params = new URLSearchParams(query)
         const page = params.get("page")
         console.log(page);
-        let res = await fetch(`/api/products/paginate?title=${filter}&page=${page || 1}&limit=${limit}`);
+        const category = "manga";
+        let res = await fetch(`/api/products/paginate?page=${page || 1}&limit=${limit}&category=${category}`);
         res = await res.json();
         console.log(res);
         const prev = document.querySelector("#prev")

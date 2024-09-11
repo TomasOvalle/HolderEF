@@ -2,38 +2,31 @@ async function fetchProfile() {
     try {
         let response = await fetch("/api/sessions/online");
         response = await response.json();
-        console.log(response);
+        //console.log(response);
 
         const user = response.response;
         const uid = response.response._id;
 
-        console.log(uid);
-        console.log("User role:", user.role);
+        //console.log(uid);
+        //console.log("User role:", user.role);
 
         if (user.role === 1 || user.role === 2) {
-            console.log(user);
-            template = (data) => `
-                <div class="Container container-fluid ">
-                    <figure class="figure">
-                            <img style="width: 253px; height: 351px" class="img-fluid rounded" src="${data.photo}" alt="${data._id}" />
-                        <figcaption class="editorial figure-caption">${data.email}</figcaption>
-                    </figure>
-                </div>
-                <form class="login-form">
-                    <input class="login-input" placeholder="Title" type="text" name="Title" id="Title">
-                    <input class="login-input" placeholder="Publisher" type="text" name="publisher" id="publisher">
-                    <input class="login-input" placeholder="URL photo" type="text" name="photo" id="photo">
-                    <input class="login-input" placeholder="Price" type="number" name="Price" id="Price">
-                    <input class="login-input" placeholder="Category" type="text" name="Category" id="Category">
-                    <input class="login-input" placeholder="Stock" type="number" name="Stock" id="Stock">
-                    <input class="login-button" type="button" id="productsRegister" value="Register!">
-                </form>`;
+            //console.log(user);
+            template = (data) =>`
+                    <article class="tw-followCard">
+                        <header class="tw-followCard-header">
+                            <img class="tw-followCard-avatar" src="${data.photo}" alt="${data._id}">
+                            <div class="tw-followCard-info">
+                                <span class="tw-followCard-infoUserName">@${data.email}</span>
+                            </div>
+                        </header>
+                    </article>`;
 
         let res = await fetch("/api/users/"+uid);
         res = await res.json();
-        console.log(res);
+        //console.log(res);
         const userProfile = Array.isArray(res.response) ? res.response : [res.response];
-        console.log(userProfile);
+        //console.log(userProfile);
         document.getElementById("profile").innerHTML = userProfile
             .map((each) => template(each))
             .join("");
@@ -47,23 +40,23 @@ async function fetchProfile() {
                     category: document.querySelector("#Category").value,
                     stock: document.querySelector("#Stock").value
                 };
-                console.log(data);
+                //console.log(data);
 
                 const opts = {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data),
                 }
-                console.log(data);
+                //console.log(data);
             
                 try {
                     let response = await fetch("/api/sessions/online");
                     response = await response.json();
-                    console.log(response);
+                    //console.log(response);
             
                     let register = await fetch("/api/products", opts);
                     register = await register.json();
-                    console.log(register);
+                    //console.log(register);
             
                     if (register.statusCode === 201) {
                         Swal.fire({
@@ -115,8 +108,8 @@ async function fetchProfile() {
         userProfile = await userProfile.json();
         userProfile = userProfile.response
 
-        console.log(response);
-        console.log(userProfile);
+        //console.log(response);
+        //console.log(userProfile);
 
         if (userProfile?.length > 0) {
             document.getElementById("profile").innerHTML = userProfile
@@ -125,7 +118,7 @@ async function fetchProfile() {
         }
         }
     } catch (error) {
-        console.log(error);
+        console.error("Error", error);
     }
 }
 

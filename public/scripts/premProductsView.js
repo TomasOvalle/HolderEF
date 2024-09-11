@@ -19,10 +19,10 @@ async function premProducts() {
             console.log(filteredProducts);
 
             const template = (data) => `
-                <div class="Container container-fluid ">
+                <div class="premProducts container-fluid ">
                     <figure class="figure">
                         <a href="../pages/premDetails.html?id=${data._id}">
-                            <img style="width: 195px; height: 280px" class="img-fluid rounded" src="${data.photo}" alt="${data._id}" />
+                            <img class="img-fluid rounded" src="${data.photo}" alt="${data._id}" />
                         </a>
                         <figcaption class="editorial figure-caption">${data.publisher}</figcaption>
                         <figcaption class="titulo figure-caption">${data.title}</figcaption>

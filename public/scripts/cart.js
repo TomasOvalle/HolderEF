@@ -47,30 +47,33 @@ async function fetchUserCart() {
 fetchUserCart();
 
 
-/*async function GetTotalPurchase(user_id) {
+async function GetTotalPurchase() {
     try {
+        let response = await fetch("/api/sessions/online");
+        response = await response.json();
 
-            const uid = user_id;
-            let response = await fetch("/api/tickets/"+ uid);
-            response = await response.json();
-            console.log(response);
-            if (response.statusCode === 200) {
-                Swal.fire({
-                    title: "Done!",
-                    icon: "success",
-                    timer: 5000,
-                    timerProgressBar: true,
-                    confirmButtonColor: "#ff3b3c",
-                });
-            } else {
-                Swal.fire({
-                    title: "Try again!",
-                    icon: "error",
-                    timer: 5000,
-                    timerProgressBar: true,
-                    confirmButtonColor: "#ff3b3c",
-                });
-            }
+        const uid = response.response._id;
+        
+        let ticketResponse = await fetch("/api/tickets/"+ uid);
+        ticketResponse = await ticketResponse.json();
+        console.log(ticketResponse);
+        if (response.statusCode === 200) {
+            Swal.fire({
+                title: "Done!",
+                icon: "success",
+                timer: 5000,
+                timerProgressBar: true,
+                confirmButtonColor: "#ff3b3c",
+            });
+        } else {
+            Swal.fire({
+                title: "Try again!",
+                icon: "error",
+                timer: 5000,
+                timerProgressBar: true,
+                confirmButtonColor: "#ff3b3c",
+            });
+        }
     } catch (error) {
         console.log(error);
         Swal.fire({
@@ -82,8 +85,6 @@ fetchUserCart();
         });
     }
 }
-
-GetTotalPurchase();*/
 
     async function DeleteFromCart(product_id) {
         try {

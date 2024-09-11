@@ -19,3 +19,21 @@
     margin-top: 100px;
     margin-left: 50px;
 }
+
+.productsContainer .premProducts img{
+    width: 195px;
+    height: 280px;
+    transition: 1s ease;
+}
+
+.productsContainer .premProducts img:hover{
+    transform: scale(1.1);
+}
+
+.productsContainer .premProducts figure .editorial{
+    margin-top: 10px;
+}
+
+.productsContainer .premProducts figcaption{
+    padding-top: 5px;
+}
