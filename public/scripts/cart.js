@@ -14,30 +14,42 @@ const template = (data) => `
 
 async function fetchUserCart() {
     try {
+        // Obtener la sesión del usuario autenticado
         let sessionResponse = await fetch("/api/sessions/online");
         sessionResponse = await sessionResponse.json();
         const userId = sessionResponse.response._id;
 
         console.log("Usuario autenticado ID:", userId);
 
+        // Obtener todos los carritos
         let cartsResponse = await fetch("/api/carts/");
         cartsResponse = await cartsResponse.json();
         const allCarts = cartsResponse.response;
 
         console.log("Todos los carritos:", allCarts);
 
-        const userCart = allCarts.find(cart => cart.user_id._id === userId);
+        // Filtrar todos los carritos que pertenezcan al usuario autenticado
+        const userCarts = allCarts.filter(cart => cart.user_id._id === userId);
 
-        if (userCart) {
-            const cartId = userCart._id;
-            console.log("Carrito del usuario ID:", cartId);
-            if (userCart.product_id) {
-                document.querySelector("#productsOnCart").innerHTML = template(userCart);
+        if (userCarts.length > 0) {
+            // Si hay carritos para el usuario, renderizamos los productos en esos carritos
+            let allProductsHtml = "";
+            userCarts.forEach(userCart => {
+                if (userCart.product_id) {
+                    // Renderizamos los productos del carrito
+                    allProductsHtml += template(userCart);
+                }
+            });
+
+            if (allProductsHtml) {
+                document.querySelector("#productsOnCart").innerHTML = allProductsHtml;
             } else {
                 console.log("El carrito del usuario está vacío.");
+                document.querySelector("#productsOnCart").innerHTML = "<p>El carrito está vacío.</p>";
             }
         } else {
-            console.error("No se encontró un carrito para el usuario autenticado.");
+            console.error("No se encontraron carritos para el usuario autenticado.");
+            document.querySelector("#productsOnCart").innerHTML = "<p>No se encontraron carritos.</p>";
         }
     } catch (error) {
         console.error("Error al obtener el carrito del usuario:", error);

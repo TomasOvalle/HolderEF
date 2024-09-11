@@ -7,7 +7,7 @@ async function cvProducts() {
         const user = response.response;
         console.log("User role:", user.role);
 
-        if (user.role === 2 || user.role === 1) {
+        if (user.role === 2 || user.role === 1 || user.role === 0) {
             console.log("Prem user detected:", user);
 
             const category = "libro";
@@ -46,3 +46,64 @@ async function cvProducts() {
 }
 
 cvProducts();
+
+
+async function addToCart(id) {
+    try {
+        let userResponse = await fetch("/api/sessions/online");
+        userResponse = await userResponse.json();
+        console.log(userResponse);
+        if (userResponse.statusCode === 200) {
+            const userId = userResponse.response._id;
+            const data = {
+                product_id: id,
+                quantity: 1,
+                user_id: userId
+            };
+            const url = "/api/carts"
+            const opts = {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {"Content-Type" : "application/json"}
+            };
+            console.log(data);
+            let cartResponse = await fetch(url, opts)
+            cartResponse = await cartResponse.json()
+            console.log(cartResponse);
+            if (cartResponse.statusCode === 201) {
+                Swal.fire({
+                    title: "Done!",
+                    icon: "success",
+                    timer: 5000,
+                    timerProgressBar: true,
+                    confirmButtonColor: "#ff3b3c",
+                });
+            } else {
+                Swal.fire({
+                    title: "Please log in!",
+                    iconColor: "white",
+                    confirmButtonColor: "#ff3b3c",
+                    timer: 5000,
+                    timerProgressBar: true,
+                });
+            }
+        } else {
+            Swal.fire({
+                title: "Please log in!",
+                iconColor: "white",
+                confirmButtonColor: "#ff3b3c",
+                timer: 5000,
+                timerProgressBar: true,
+            });
+        }
+    } catch (error) {
+        console.log(error);
+        Swal.fire({
+            title: error.message,
+            icon: "error",
+            timer: 5000,
+            timerProgressBar: true,
+            confirmButtonColor: "#ff3b3c",
+        });
+    }
+};
